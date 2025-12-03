@@ -5,8 +5,8 @@ import os
 app = FastAPI(title="Secure FastAPI Server - TP3 DevSecOps")
 
 # Import models
-from models.item import Item
-from models.user import User
+from app.models.item import Item
+from app.models.user import User
 
 @app.get("/")
 def read_root():
