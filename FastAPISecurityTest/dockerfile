@@ -9,7 +9,7 @@ RUN apk add --no-cache build-base libffi-dev musl-dev
 WORKDIR /app
 
 # Copier uniquement les dépendances pour profiter du cache
-COPY /FastAPISecurityTest/requirements.txt .
+COPY requirements.txt .
 
 # Installer les dépendances dans un dossier spécifique
 RUN pip install --upgrade pip \

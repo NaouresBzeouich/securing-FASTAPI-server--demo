@@ -76,3 +76,14 @@ def create_user(user: User):
         "message": "User created",
         "user": user
     }
+
+# ----------- 9. Return secrets from Vault (DB credentials) -----------
+from app.config import DB_USERNAME, DB_PASSWORD, DB_HOST, DB_NAME
+@app.get("/secrets")
+def get_secrets():
+    return {
+        "DB_USERNAME": DB_USERNAME, 
+        "DB_PASSWORD": DB_PASSWORD,
+        "DB_HOST": DB_HOST,
+        "DB_NAME": DB_NAME
+        }

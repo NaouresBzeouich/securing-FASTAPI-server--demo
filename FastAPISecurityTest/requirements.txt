@@ -1,2 +1,3 @@
 fastapi
+hvac
 uvicorn[standard]
